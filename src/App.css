@@ -1,0 +1,139 @@
+:root{
+  --brandblack1:#010101;
+  --brandgrey1: #f9f9f9;
+  --brandgrey2: #9b9b9b;
+  --brandvoilet: #4F20D2;
+  --brandblue: #006de1;
+  --brandwhite1: #ffffff;
+}
+
+
+*{
+  margin: 0%;
+  padding: 0%;
+  font-family: "Archivo", sans-serif;
+}
+
+.App{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--brandgrey1);
+  
+}
+
+
+/*User Login*/
+
+/*Login*/
+.login{
+  width: 80vw;
+  height: 80vh;
+  background-color: var(--brandwhite1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: var(--brandwhite1);
+  column-gap: 2rem;
+/* background: linear-gradient(185deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 40%, rgba(251,251,251,1) 100%); */
+}
+
+/*Logo Newre*/
+.newre-logo{
+  width: 5rem;
+}
+
+/* Login Form*/
+.login-form{
+  width: 75vw;
+  min-height: 50vh;
+  /* background-color: var(--brandwhite1); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.login-title{
+  width: 60vw;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--brandblack1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-input{
+  margin-bottom: 1rem;
+  width: 45vw;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: var(--brandgrey2);
+  border-radius: 32rem;
+  border: 2px solid var(--brandwhite1);
+  background-color: var(--brandgrey1);
+  transition: 0.5s;
+}
+
+.login-input::placeholder{
+  text-align: left;
+}
+
+.login-input:focus {
+  width: 50vw;
+  border: 2px solid var(--brandvoilet);
+  color: var(--brandvoilet);
+  outline: none;
+  transition: 0.5s;
+}
+
+/*login btns cont*/
+.login-btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+/*Primary Button*/
+
+.primary-btn{
+  background-color: var(--brandvoilet);
+  background: linear-gradient(185deg, rgba(130,190,255,1) 0%, rgba(0,109,225,1) 38%, rgba(54,57,215,1) 73%, rgba(79,32,210,1) 100%);
+  transition: 0.5s;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--brandwhite1);
+  border: transparent;
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  margin-bottom: 1rem;
+}
+
+.primary-btn:hover{
+  background: rgb(130,190,255);
+  padding: 1rem 3rem;
+background: linear-gradient(185deg, rgba(130,190,255,1) 0%, rgba(0,109,225,1) 59%, rgba(54,57,215,1) 83%, rgba(54,57,215,1) 83%, rgba(79,32,210,1) 100%);
+transition: 0.5s;
+}
+
+/*Jump to page*/
+
+.jumptopage{
+  text-decoration: none;
+  color: var(--brandgrey2);
+  transition: 0.5s;
+}
+
+.jumptopage:hover{
+  color: var(--brandblue);
+  transition: 0.5s;
+}
