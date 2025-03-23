@@ -1,5 +1,5 @@
 export default function PrimaryBtn(props){
     return(
-        <button className="primary-btn">{props.btntext}</button>
+        <button onClick={props.funcact} className="primary-btn">{props.btntext}</button>
     )
 }

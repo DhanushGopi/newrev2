@@ -1,22 +1,32 @@
 :root{
   --brandblack1:#010101;
   --brandgrey1: #f9f9f9;
-  --brandgrey2: #9b9b9b;
+  --brandgrey2: #868686;
   --brandvoilet: #4F20D2;
   --brandblue: #006de1;
   --brandwhite1: #ffffff;
+  --archivo : "Archivo", sans-serif;
 }
 
 
 *{
   margin: 0%;
   padding: 0%;
-  font-family: "Archivo", sans-serif;
+  font-family: var(--archivo);
+}
+
+body{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+  row-gap: 3rem;
+  background-color: var(--brandgrey1);
 }
 
 .App{
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,9 +38,9 @@
 /*User Login*/
 
 /*Login*/
-.login{
+.form{
   width: 80vw;
-  height: 80vh;
+  height: 100%;
   background-color: var(--brandwhite1);
   display: flex;
   justify-content: center;
@@ -40,18 +50,20 @@
   border-radius: 2rem;
   background: var(--brandwhite1);
   column-gap: 2rem;
+  margin: 2rem;
 /* background: linear-gradient(185deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 40%, rgba(251,251,251,1) 100%); */
 }
 
 /*Logo Newre*/
 .newre-logo{
   width: 5rem;
+  padding: 1rem;
 }
 
 /* Login Form*/
-.login-form{
+.form-cont{
   width: 75vw;
-  min-height: 50vh;
+  height: 100%;
   /* background-color: var(--brandwhite1); */
   display: flex;
   justify-content: center;
@@ -61,7 +73,7 @@
   border-radius: 2rem;
 }
 
-.login-title{
+.form-title{
   width: 60vw;
   text-align: center;
   font-size: 2rem;
@@ -70,8 +82,8 @@
   padding: 1rem;
   margin-bottom: 1rem;
 }
-
-.login-input{
+/*form input*/
+.form-input{
   margin-bottom: 1rem;
   width: 45vw;
   padding: 1rem 2rem;
@@ -83,11 +95,11 @@
   transition: 0.5s;
 }
 
-.login-input::placeholder{
+.form-input::placeholder{
   text-align: left;
 }
 
-.login-input:focus {
+.form-input:focus {
   width: 50vw;
   border: 2px solid var(--brandvoilet);
   color: var(--brandvoilet);
@@ -95,13 +107,129 @@
   transition: 0.5s;
 }
 
-/*login btns cont*/
-.login-btns{
+/*form flex*/
+
+.form-flex{
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 1.5rem;
+}
+
+/*form date*/
+.form-date{
+  margin-bottom: 1rem;
+  width: 19vw;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: var(--brandgrey2);
+  border-radius: 32rem;
+  border: 2px solid var(--brandwhite1);
+  background-color: var(--brandgrey1);
+  transition: 0.5s;
+}
+
+
+.form-date:focus{
+  width: 24vw;
+  border: 2px solid var(--brandvoilet);
+  color: var(--brandvoilet);
+  outline: none;
+  transition: 0.5s;
+}
+
+
+/*form select*/
+
+.form-select{
+  margin-bottom: 1rem;
+  width: 24vw;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: var(--brandgrey2);
+  border-radius: 32rem;
+  border: 2px solid var(--brandwhite1);
+  background-color: var(--brandgrey1);
+  transition: 0.5s;
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  width: 29vw;
+  border: 2px solid var(--brandvoilet);
+  color: var(--brandvoilet);
+  outline: none;
+  transition: 0.5s;
+}
+
+
+.form-option{
+  width: 24vw;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: var(--brandvoilet);
+  border-radius: 32rem;
+  border: 2px solid var(--brandwhite1);
+  background-color: var(--brandgrey1);
+  transition: 0.5s;
+}
+
+.form-select-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--brandgrey2);
+}
+
+
+.form-select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--brandgrey2);
+  pointer-events: none;
+}
+
+/*form phoneno*/
+.form-phoneno{
+  margin-bottom: 1rem;
+  width: 45vw;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: var(--brandgrey2);
+  border-radius: 32rem;
+  border: 2px solid var(--brandwhite1);
+  background-color: var(--brandgrey1);
+  transition: 0.5s;
+}
+
+.form-phoneno::placeholder{
+  text-align: left;
+}
+
+.form-phoneno:focus {
+  width: 50vw;
+  border: 2px solid var(--brandvoilet);
+  color: var(--brandvoilet);
+  outline: none;
+  transition: 0.5s;
+}
+
+
+
+/*login btns cont*/
+.form-btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   column-gap: 2rem;
 }
+
 
 /*Primary Button*/
 
@@ -121,9 +249,31 @@
 .primary-btn:hover{
   background: rgb(130,190,255);
   padding: 1rem 3rem;
-background: linear-gradient(185deg, rgba(130,190,255,1) 0%, rgba(0,109,225,1) 59%, rgba(54,57,215,1) 83%, rgba(54,57,215,1) 83%, rgba(79,32,210,1) 100%);
+  background: linear-gradient(185deg, rgba(130,190,255,1) 0%, rgba(0,109,225,1) 59%, rgba(54,57,215,1) 83%, rgba(54,57,215,1) 83%, rgba(79,32,210,1) 100%);
+  transition: 0.5s;
+}
+
+
+/*Secondary Button*/
+
+.sec-btn{
+  background-color: var(--brandwhite1);
+  transition: 0.5s;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--brandvoilet);
+  border: 1px solid var(--brandvoilet);
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  margin-bottom: 1rem;
+}
+
+.sec-btn:hover{
+  background: var(--brandgrey1);
+  padding: 1rem 3rem;
 transition: 0.5s;
 }
+
 
 /*Jump to page*/
 
@@ -131,9 +281,66 @@ transition: 0.5s;
   text-decoration: none;
   color: var(--brandgrey2);
   transition: 0.5s;
+  padding: 1rem;
 }
 
 .jumptopage:hover{
   color: var(--brandblue);
   transition: 0.5s;
+}
+
+footer{
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--brandwhite1);
+}
+
+
+/*Header*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:var(--brandwhite1); /* Or any color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Add padding for spacing */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+
+/*Profile Page*/
+.page{
+  width: 100%;
+  margin: 5rem 0rem; 
+}
+
+
+/*Bottom Nav*/
+
+.bottom-nav-cont{
+  border: transparent !important;
+  box-shadow: none !important;
+  z-index: 1000 !important;
+}
+
+.bottom-nav-btn{
+  background-color: var(--brandwhite1) !important;
+  color: var(--brandgrey2) !important;
+  font-family: var(--archivo) !important;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.bottom-nav-btn.Mui-selected {
+  color: var(--brandvoilet) !important; /* Highlight active tab */
+  transition: 0.5s;
+
 }
