@@ -2,6 +2,7 @@ import Landingpage from '../pages/Landingpage';
 import Reg from '../pages/users/Reg';
 import Login from '../pages/users/Login';
 import Home from '../pages/users/Home';
+import Terms from '../pages/Terms';
 import ConductorReg from '../pages/conductors/Reg';
 import ConductorLogin from '../pages/conductors/Login';
 import ConductorHome from '../pages/conductors/Home';
@@ -11,6 +12,7 @@ import AdminHome from '../pages/admin/Home'
 import Pass from '../pages/users/Pass';
 import History from '../pages/users/History';
 import Profile from '../pages/users/Profile';
+import PassHome from '../pages/users/PassHome';
 
 export const pathsandelements = [
   
@@ -32,6 +34,10 @@ export const pathsandelements = [
       element:<Home/>
     },
     {
+      path:'/passhome',
+      element:<PassHome/>
+    },
+    {
       path:'/pass',
       element:<Pass/>
     },
@@ -42,6 +48,10 @@ export const pathsandelements = [
     {
       path:'/profile',
       element:<Profile/>
+    },
+    {
+      path:'/terms',
+      element:<Terms/>
     },
 
     // Conductor
