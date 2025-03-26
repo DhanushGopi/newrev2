@@ -1,18 +1,28 @@
 import Landingpage from '../pages/Landingpage';
+import Terms from '../pages/Terms';
+
 import Reg from '../pages/users/Reg';
 import Login from '../pages/users/Login';
 import Home from '../pages/users/Home';
-import Terms from '../pages/Terms';
-import ConductorReg from '../pages/conductors/Reg';
-import ConductorLogin from '../pages/conductors/Login';
-import ConductorHome from '../pages/conductors/Home';
-import AdminLogin from '../pages/admin/Login';
-import AdminReg from '../pages/admin/Reg';
-import AdminHome from '../pages/admin/Home'
 import Pass from '../pages/users/Pass';
 import History from '../pages/users/History';
 import Profile from '../pages/users/Profile';
 import PassHome from '../pages/users/PassHome';
+
+import ConductorReg from '../pages/conductors/Reg';
+import ConductorLogin from '../pages/conductors/Login';
+import ConductorHome from '../pages/conductors/Home';
+import ConHistory from '../pages/conductors/ConHistory';
+import ConProfile from '../pages/conductors/ConProfile';
+import PassVerify from '../pages/conductors/PassVerify';
+
+import AdminLogin from '../pages/admin/Login';
+import AdminReg from '../pages/admin/Reg';
+import AdminHome from '../pages/admin/Home';
+
+
+
+
 
 export const pathsandelements = [
   
@@ -66,6 +76,18 @@ export const pathsandelements = [
     {
       path:'/conductor/home',
       element: <ConductorHome />
+    },
+    {
+      path:'/conductor/history',
+      element: <ConHistory/>
+    },
+    {
+      path:'/conductor/profile',
+      element: <ConProfile />
+    },
+    {
+      path:'/conductor/passverify',
+      element: <PassVerify />
     },
     // Admin
     {

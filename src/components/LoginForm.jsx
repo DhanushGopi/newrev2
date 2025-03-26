@@ -49,7 +49,7 @@ export default function LoginForm(props){
             console.log('/'+props.role+'/home')
             navigate('/'+props.role+'/home')
         }          
-            navigate('/home')
+            // navigate('/home')
 
             console.log("The fetched Data", newreUserFetchedData);
 
