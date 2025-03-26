@@ -738,7 +738,7 @@ font-weight: 700;
 }
 
 /* Hide the Start and Stop buttons */
-/* #html5-qrcode-button-camera-start,
+#html5-qrcode-button-camera-start,
 #html5-qrcode-button-camera-stop {
   display: none !important;
-} */
+}
