@@ -749,7 +749,7 @@ font-weight: 700;
   font-weight: 500;
 }
 
-.pass-ticket-validity{
+.pass-ticket-verified{
   color: var(--brandblack1);
   background-color: var(--brandwhite1);
   padding: 1.5rem 2rem;

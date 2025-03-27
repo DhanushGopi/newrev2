@@ -183,7 +183,7 @@ export default function PassVerify(){
                         <div className="pass-verified-details">
                         {/* Scanned Data */}
                         {passVerifed && (
-                                <div className="pass-ticket-validity">
+                                <div className="pass-ticket-verified">
                                     <Verified className="pass-ticket-verified-status-icon"/>
                                   <div className="pass-ticket-verified-cont">
                                 <p className="pass-ticket-verified-text">Name :<b>{decryptedData.name}</b></p>
