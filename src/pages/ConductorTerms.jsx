@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import { Info } from "lucide-react";
 import BottomNav from "../components/BottomNav";
 import { Close, Dashboard, LocalActivity, Person, Restore } from "@mui/icons-material";
 
-export default function Terms(){
+export default function ConductorTerms(){
     return (
         <div className="page pass-page">
             <Header />
@@ -13,7 +12,7 @@ export default function Terms(){
                     <h2 className="text-subhead">Terms and Conditions</h2>
                     <p className="text-normal">Terms for the user clarity</p>
                 </div>
-                <Link to="/home"><Close className="terms" /></Link>
+                <Link to="/conductor/home"><Close className="terms" /></Link>
             </div>
             <div className="pass-history-details-cont">
         <p>

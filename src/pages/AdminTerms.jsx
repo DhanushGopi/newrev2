@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import { Info } from "lucide-react";
 import BottomNav from "../components/BottomNav";
-import { Close, Dashboard, LocalActivity, Person, Restore } from "@mui/icons-material";
+import { Close, Dashboard, Gavel, LocalActivity, Person, Restore, Verified } from "@mui/icons-material";
 
-export default function Terms(){
+export default function AdminTerms(){
     return (
         <div className="page pass-page">
             <Header />
@@ -13,7 +13,7 @@ export default function Terms(){
                     <h2 className="text-subhead">Terms and Conditions</h2>
                     <p className="text-normal">Terms for the user clarity</p>
                 </div>
-                <Link to="/home"><Close className="terms" /></Link>
+                <Link to="/admin/home"><Close className="terms" /></Link>
             </div>
             <div className="pass-history-details-cont">
         <p>
@@ -66,11 +66,11 @@ export default function Terms(){
         </p>
         <p>For further inquiries, contact us at [Insert Contact Information].</p>
       </div>
-            <BottomNav
-                                 navPaths={["/home", "/passhome", "/history", "/profile"]}
-                                 navLabels={["Home", "Pass", "History", "Profile"]}
-                                 navIcons = {[<Dashboard/>, <LocalActivity/>,<Restore/>, <Person/>]}
-                            />
+      <BottomNav 
+                navPaths={["/admin/home", "/admin/passverify","/admin/terms", "/admin/profile", ]}
+                navLabels={["Home", "Verify","Terms", "Profile"]}
+                navIcons = {[<Dashboard/>, <Verified/>,<Gavel/>, <Person/>]}
+            />
         </div>
     );
 }

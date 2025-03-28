@@ -16,11 +16,14 @@ import ConductorHome from '../pages/conductors/Home';
 import ConHistory from '../pages/conductors/ConHistory';
 import ConProfile from '../pages/conductors/ConProfile';
 import PassVerify from '../pages/conductors/PassVerify';
+import ConductorTerms from '../pages/ConductorTerms';
 
 import AdminLogin from '../pages/admin/Login';
 import AdminReg from '../pages/admin/Reg';
 import AdminHome from '../pages/admin/Home';
-
+import AdminTerms from '../pages/AdminTerms';
+import AdminPassVerify from '../pages/admin/PassVerify';
+import AdminProfile from '../pages/admin/AdminProfile';
 
 
 
@@ -94,6 +97,10 @@ export const pathsandelements = [
       path:'/conductor/passverify',
       element: <PassVerify />
     },
+    {
+      path:'/conductor/terms',
+      element: <ConductorTerms />
+    },
     // Admin
     {
         path:'/admin/reg',
@@ -104,7 +111,19 @@ export const pathsandelements = [
         element: <AdminLogin />
       },
       {
-        path:'/admin/login',
+        path:'/admin/home',
         element: <AdminHome />
+      },
+      {
+        path:'/admin/terms',
+        element: <AdminTerms />
+      },
+      {
+        path:'/admin/passverify',
+        element: <AdminPassVerify />
+      },
+      {
+        path:'/admin/profile',
+        element: <AdminProfile/>
       },
   ]

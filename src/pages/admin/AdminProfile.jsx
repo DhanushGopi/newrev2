@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
-import { Dashboard, Info, Person, Restore, Verified } from "@mui/icons-material";
+import { Dashboard, Gavel, Info, LocalActivity, Person, Restore, Verified } from "@mui/icons-material";
 import BottomNav from "../../components/BottomNav";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { firebaseApp } from "../../config/firebase";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 
-export default function ConProfile() {
+export default function AdminProfile() {
     const firestoreDb = getFirestore(firebaseApp);
     const getNewreUser = useSelector((state) => state.newreUserData);
     const userId = getNewreUser?.uid;
@@ -16,7 +16,7 @@ export default function ConProfile() {
 
     const fetchUserData = async (uid) => {
         try {
-            const newreUserDetails = await getDoc(doc(firestoreDb, "Conductor", uid));
+            const newreUserDetails = await getDoc(doc(firestoreDb, "Admin", uid));
             if (newreUserDetails.exists()) {
                 setUserProfile(newreUserDetails.data());
             } else {
@@ -64,11 +64,11 @@ export default function ConProfile() {
                 <div className="pass-profile-details"><label className="pass-history-route-datetime">Phone Number:</label><h2 className="pass-history-route-title">{userProfile.phoneNo}</h2></div>
                 <div className="pass-profile-details"><label className="pass-history-route-datetime">Password:</label><h2 className="pass-history-route-title">{userProfile.password}</h2></div>
             </div>
-            <BottomNav
-                navPaths={["/conductor/home", "/conductor/passverify", "/conductor/history", "/conductor/profile"]}
-                navLabels={["Home", "Verify", "History", "Profile"]}
-                navIcons={[<Dashboard />, <Verified />, <Restore />, <Person />]}
-            />
+            <BottomNav 
+                            navPaths={["/admin/home", "/admin/passverify","/admin/terms", "/admin/profile", ]}
+                            navLabels={["Home", "Verify","Terms", "Profile"]}
+                            navIcons = {[<Dashboard/>, <Verified/>,<Gavel/>, <Person/>]}
+                        />
         </div>
     );
 }
