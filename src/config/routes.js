@@ -8,6 +8,7 @@ import Pass from '../pages/users/Pass';
 import History from '../pages/users/History';
 import Profile from '../pages/users/Profile';
 import PassHome from '../pages/users/PassHome';
+import PassSucced from '../pages/users/PassSucced';
 
 import ConductorReg from '../pages/conductors/Reg';
 import ConductorLogin from '../pages/conductors/Login';
@@ -62,6 +63,10 @@ export const pathsandelements = [
     {
       path:'/terms',
       element:<Terms/>
+    },
+    {
+      path:'/passsucced',
+      element:<PassSucced/>
     },
 
     // Conductor

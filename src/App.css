@@ -781,6 +781,80 @@ font-weight: 700;
 }
 
 
+/*Pass Succed*/
+.pass-succed-cont{
+  width: 50vw;
+  height: 70vh;
+  background-color: var(--brandwhite1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: var(--brandwhite1);
+  column-gap: 2rem;
+  margin: 2rem;
+/* background: linear-gradient(185deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 40%, rgba(251,251,251,1) 100%); */
+}
+
+/* pass history*/
+.pass-history-details-cont{
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: var(--brandwhite1);
+}
+.pass-history-details{
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--brandwhite1);
+  padding: 1rem;
+  border-bottom: 1px solid var(--brandgrey2);
+  border-radius: 1rem;
+}
+
+.pass-history-details-left{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: var(--brandwhite1);
+  row-gap: 0.6rem;
+
+}
+
+.pass-history-route-title{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--brandgrey4);
+}
+
+.pass-history-route-datetime{
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--brandgrey2);
+}
+.pass-history-status-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--semanticgreen1);
+  border: 1px solid var(--semanticgreen2);
+  padding: 0.5rem 1rem;
+  column-gap: 0.5rem;
+  border-radius: 2rem;
+}
+.pass-history-status-icon{
+  color: var(--semanticgreen2) !important;
+}
+
+
+
 /*Bottom Nav*/
 
 .bottom-nav-cont{

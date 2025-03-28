@@ -105,7 +105,7 @@ export default function Pass(){
             });
 
             console.log("Pass updated successfully:", passData);
-            navigate('/passhome');
+            navigate('/passsucced');
         } catch (error) {
             console.error("Error updating pass:", error);
         }
