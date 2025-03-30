@@ -44,7 +44,7 @@ function UserCard() {
 }
 
 
-export default function Landingpage(){
+export default function LandingPage1(){
 
     const navigate = useNavigate();
     const goToLogin = () =>{
@@ -65,6 +65,9 @@ export default function Landingpage(){
                 <AdminCard/>
                 <UserCard/>
                 <ConductorCard/>
+        <PrimaryBtn  funcact={goToLogin} btntext="User Login"/>
+        <PrimaryBtn  funcact={goToConLogin} btntext="Conductor Login"/>
+        <PrimaryBtn  funcact={goToAdminLogin} btntext="Admin Login"/>
         </div>
         </div>
         </div>

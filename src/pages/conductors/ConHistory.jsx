@@ -46,7 +46,7 @@ export default function ConHistory(){
                                             <h2 className="text-subhead">Pass History</h2>
                                             <p className="text-normal">It will show your tickets</p>
                                             </div>
-                                            <Link to="/terms"><Info className="terms"/></Link>
+                                            <Link to="/conductor/terms"><Info className="terms"/></Link>
                                     </div>
                     
                                     <div className="pass-history-details-cont">

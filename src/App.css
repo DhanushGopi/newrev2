@@ -905,3 +905,60 @@ font-weight: 700;
 #html5-qrcode-button-camera-stop {
   display: none !important;
 }
+
+
+/*AI Generated CSS*/
+
+.role-selection-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card-grid {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Card styles */
+.card {
+  width: 200px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: var(--brandwhite1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--brandblack1);
+}
+
+.card p {
+  color: var(--brandgrey2);
+  font-size: 1rem;
+}
+
+/* Hover effects */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific card styles */
+.admin-card {
+  border-left: 5px solid var(--brandvoilet);
+}
+
+.conductor-card {
+  border-left: 5px solid var(--brandblue);
+}
+
+.user-card {
+  border-left: 5px solid var(--semanticgreen2);
+}

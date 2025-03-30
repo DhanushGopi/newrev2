@@ -169,7 +169,7 @@ export default function PassVerify(){
                                 <h2 className="text-subhead">Pass Verfier</h2>
                                 <p className="text-normal">Secured way to verifiy the pass</p>
                                 </div>
-                                <Link to="/terms"><Info className="terms"/></Link>
+                                <Link to="/admin/terms"><Info className="terms" /></Link>
                         </div>
                         <div className="pass-verified-details">
                         {/* Scanned Data */}

@@ -58,24 +58,22 @@ export default function PassVerify(){
     const latestPassQr = decryptedData.selectedPass;
     const validFromQr = decryptedData.date;
     const validToQr = decryptedData.validTo;
-    const currentDate = new Date().toISOString().split("T")[0];
+
     if (
-      (latestPassDb === latestPassQr) &&
-    (validFromDb === validFromQr) &&
-     (validToDb === validToQr) //&&
-    // ( validFromDb >= currentDate)
+      (latestPassDb == latestPassQr) &&
+    (validFromDb == validFromQr) &&
+     (validToDb == validToQr)
   ) {
       addVerifiedPass(decryptedData);
       console.log("Verified");
       setPassVerified("Valid");
+      console.log("The user in the from db", newreUserDetailsData)
+     console.log("The user in the QR",decryptedData);
 
   } else {
       console.log("Not Verified");
       setPassVerified("Not Valid");
   }
-
-     console.log("The user in the from db", newreUserDetailsData)
-     console.log("The user in the QR",decryptedData);
    } catch (error) {
     console.error("from addVerifiedPass()",error);
    } 
@@ -169,7 +167,7 @@ export default function PassVerify(){
                                 <h2 className="text-subhead">Pass Verfier</h2>
                                 <p className="text-normal">Secured way to verifiy the pass</p>
                                 </div>
-                                <Link to="/terms"><Info className="terms"/></Link>
+                                <Link to="/conductor/terms"><Info className="terms"/></Link>
                         </div>
                         <div className="pass-verified-details">
                         {/* Scanned Data */}

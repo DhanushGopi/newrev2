@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import BottomNav from "../components/BottomNav";
-import { Close, Dashboard, LocalActivity, Person, Restore } from "@mui/icons-material";
+import { Close, Dashboard, LocalActivity, Person, Restore, Verified } from "@mui/icons-material";
 
 export default function ConductorTerms(){
     return (
@@ -65,11 +65,11 @@ export default function ConductorTerms(){
         </p>
         <p>For further inquiries, contact us at [Insert Contact Information].</p>
       </div>
-            <BottomNav
-                                 navPaths={["/home", "/passhome", "/history", "/profile"]}
-                                 navLabels={["Home", "Pass", "History", "Profile"]}
-                                 navIcons = {[<Dashboard/>, <LocalActivity/>,<Restore/>, <Person/>]}
-                            />
+      <BottomNav
+                        navPaths={["/conductor/home", "/conductor/passverify", "/conductor/history", "/conductor/profile"]}
+                        navLabels={["Home", "Verify", "History", "Profile"]}
+                        navIcons = {[<Dashboard/>, <Verified/>,<Restore/>, <Person/>]}
+                    />
         </div>
     );
 }

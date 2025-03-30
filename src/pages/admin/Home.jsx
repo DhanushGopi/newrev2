@@ -49,7 +49,7 @@ const Home = () => {
                         <h2 className="text-subhead">Hi,{getNewreUser.userName}</h2>
                         <p className="text-normal">Welcome to the Newre App</p>
                         </div>
-                        <Link to="/terms"><Info className="terms"/></Link>
+                        <Link to="/admin/terms"><Info className="terms" /></Link>
                 </div>
                 <div className="pass-card">
                 <p className="pass-card-icon">Total Number of Newre User</p>
