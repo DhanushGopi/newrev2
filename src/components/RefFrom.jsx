@@ -66,6 +66,15 @@ export default function RegForm(props){
         }
     }
 
+    const goToLogin = () =>{
+        if(props.role === "User"){
+            navigate('/login');
+        }else{
+            console.log('/'+props.role+'/login')
+            navigate('/'+props.role+'/login')
+        }      
+    }
+
      return(       
             <form className="form-cont">
                 <label className="form-title">{props.role} Registration</label>
@@ -86,7 +95,7 @@ export default function RegForm(props){
                 <input className="form-input" type="password" name="retypepassword" required minlength="8" placeholder="Retype your password" onChange={(e)=>setRetypePassword(e.target.value)}/>
                 <div className="form-btns"> 
                 <PrimaryBtn funcact={createUser} btntext="Submit"/>
-                <SecondaryBtn btntext="Cancel"/>
+                <SecondaryBtn funcact={goToLogin} btntext="Cancel"/>
                 </div>
             </form>
         ) 
